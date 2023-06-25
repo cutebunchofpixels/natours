@@ -1,3 +1,5 @@
+@use "../../abstracts";
+
 .btn {
 
     &:link,
@@ -12,7 +14,7 @@
 
     &:hover {
         transform: translateY(-.3rem);
-        box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+        box-shadow: 0 1rem 2rem rgba(abstracts.$variables-color-black, .2);
 
         &::after {
             transform: scaleX(1.4) scaleY(1.6);
@@ -22,7 +24,7 @@
 
     &:active {
         transform: translateY(-.1rem);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba(abstracts.$variables-color-black, .2);
     }
 
     &::after {
@@ -39,11 +41,11 @@
     }
 
     &--white {
-        background-color: #FFF;
-        color: #777;
+        background-color: abstracts.$variables-color-white;
+        color: abstracts.$variables-color-grey-dark;
 
         &::after {
-            background-color: #FFF;
+            background-color: abstracts.$variables-color-white;
         }
     }
 }

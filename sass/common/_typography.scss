@@ -1,5 +1,7 @@
+@use "../abstracts";
+
 .heading-primary {
-    color: #FFF;
+    color: abstracts.$variables-color-white;
     text-transform: uppercase;
 
     &--main {
