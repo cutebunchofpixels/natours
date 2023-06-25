@@ -18,3 +18,16 @@
         letter-spacing: 1.3rem;
     }
 }
+
+.heading-secodary {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-image: linear-gradient(to right,
+     abstracts.$variables-color-primary-light,
+     abstracts.$variables-color-primary-dark);
+    display: inline-block;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
