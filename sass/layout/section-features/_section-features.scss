@@ -1,0 +1,26 @@
+@use "../../abstracts";
+
+.section-features {
+    padding: 20rem 0;
+
+    background-image: linear-gradient(to right bottom,
+            rgba(abstracts.$variables-color-primary-light, 0.8),
+            rgba(abstracts.$variables-color-primary-dark, 0.8)),
+        url(../../../img/nat-4.jpg);
+    background-size: cover;
+
+    transform: skewY(-7deg);
+    margin-top: -10rem;
+
+    & > * {
+        transform: skewY(7deg);
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(min-content, 25rem));
+        justify-content: center;
+        justify-items: center;
+        column-gap: abstracts.$variables-column-gap;
+    }
+}

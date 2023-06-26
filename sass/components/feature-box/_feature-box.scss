@@ -1,0 +1,33 @@
+@use "../../abstracts";
+
+.feature-box {
+    background-color: rgba(abstracts.$variables-color-white, .8);
+    font-size: abstracts.$variables-default-font-size;
+    padding: 2.5rem;
+    text-align: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(abstracts.$variables-color-black, .15);
+    transition: transform .3s;
+
+    &:hover {
+        transform: translateY(-1.5rem) scale(1.15);
+
+    }
+
+    &__icon {
+        font-size: 6rem;
+        margin-bottom: .5rem;
+
+        display: inline-block;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        background-image: linear-gradient(to right, 
+        rgba(abstracts.$variables-color-primary-light, .8),
+        rgba(abstracts.$variables-color-primary-dark, .8));
+    }
+
+    &__text {
+
+    }
+}
