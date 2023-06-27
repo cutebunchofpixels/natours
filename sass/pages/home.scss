@@ -3,8 +3,10 @@
 @use "../layout/header";
 @use "../layout/section-about";
 @use "../layout/section-features";
+@use "../layout/section-tours";
 
 @use "../components/button";
 @use "../components/button-text";
 @use "../components/composition";
 @use "../components/feature-box";
+@use "../components/card";
