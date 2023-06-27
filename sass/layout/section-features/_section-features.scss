@@ -16,10 +16,9 @@
         transform: skewY(7deg);
     }
 
-    .container {
+    &__features-grid {
         display: grid;
-        grid-template-columns: repeat(4, minmax(min-content, 25rem));
-        justify-content: center;
+        grid-template-columns: repeat(4, 1fr);
         justify-items: center;
         column-gap: abstracts.$variables-column-gap;
     }

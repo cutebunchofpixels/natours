@@ -42,11 +42,16 @@
     }
 
     &--white {
-        background-color: abstracts.$variables-color-white;
-        color: abstracts.$variables-color-grey-dark;
+        @include abstracts.mixins-button(
+            abstracts.$variables-color-white,
+            abstracts.$variables-color-grey-dark
+        )
+    }
 
-        &::after {
-            background-color: abstracts.$variables-color-white;
-        }
+    &--green {
+        @include abstracts.mixins-button(
+            abstracts.$variables-color-primary,
+            abstracts.$variables-color-white
+        )
     }
 }
