@@ -1,0 +1,51 @@
+@use "../../abstracts";
+
+.form {
+    &__radio-group {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: abstracts.$variables-column-gap;
+        row-gap: abstracts.$variables-row-gap-sm;
+    }
+
+    &__radio-button-container {
+        position: relative;
+    }
+
+    &__radio-label {
+        font-size: abstracts.$variables-default-font-size;
+        cursor: pointer;
+        padding-left: 4.5rem;
+    }
+
+    &__radio-button {
+        height: 3rem;
+        width: 3rem;
+        border: 4px solid abstracts.$variables-color-primary;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        &::after {
+            width: calc(100% - .5rem);
+            height: calc(100% - .5rem);
+            content: "";
+            border-radius: 50%;
+            background-color: abstracts.$variables-color-primary;
+            opacity: 0;
+            transition: all .3s;
+        }
+    }
+
+    &__radio-input:checked + &__radio-label > &__radio-button::after {
+        opacity: 1;
+    }
+
+    &__radio-input {
+        display: none;
+    }
+}
