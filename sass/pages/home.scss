@@ -5,6 +5,7 @@
 @use "../layout/section-features";
 @use "../layout/section-tours";
 @use "../layout/section-stories";
+@use "../layout/section-booking";
 
 @use "../components/button";
 @use "../components/button-text";
@@ -13,3 +14,4 @@
 @use "../components/card";
 @use "../components/story";
 @use "../components/bg-video";
+@use "../components/form";

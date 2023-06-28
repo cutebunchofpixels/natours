@@ -1,0 +1,13 @@
+@use "../../abstracts";
+
+.form {
+    display: flex;
+    flex-direction: column;
+    row-gap: abstracts.$variables-row-gap-sm;
+
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+}

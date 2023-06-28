@@ -1,0 +1,28 @@
+@use "../../abstracts";
+
+.form__input {
+    font-size: abstracts.$variables-default-font-size;
+    padding: 1.5rem 2rem;
+    background-color: rgba(abstracts.$variables-color-white, .8);
+    border: none;
+    font-family: inherit;
+    border-bottom: 3px solid transparent;
+    width: 90%;
+    display: block;
+    color: inherit;
+    transition: all .3s;
+
+    &::placeholder {
+        color: abstracts.$variables-color-grey-dark-2; 
+    }
+
+    &:focus {
+        outline: none;
+        box-shadow: 0 1rem 2rem rgba(abstracts.$variables-color-black, .1);
+        border-bottom: 3px solid abstracts.$variables-color-primary;
+
+        &:invalid {
+            border-bottom: 3px solid abstracts.$variables-color-secondary-dark;
+        }
+    }
+}

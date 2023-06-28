@@ -4,6 +4,7 @@ $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
 
 $color-grey-dark: #777;
+$color-grey-dark-2: #999;
 $color-grey-light-1: #f7f7f7;
 $color-grey-light-2: #eee;
 
@@ -20,7 +21,10 @@ $color-black: #000;
 $default-font-size: 1.6rem;
 
 //GRID
+$column-gap-sm: 3rem;
 $column-gap: 6rem;
+$column-gap-lg: 12rem;
 
+$row-gap-sm: 2rem;
 $row-gap: 4rem;
 $row-gap-lg: 8rem;
