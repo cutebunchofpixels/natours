@@ -163,6 +163,16 @@ body {
   column-gap: 6rem;
 }
 
+.section-stories {
+  padding: 15rem 0;
+  background-color: #f7f7f7;
+}
+.section-stories__stories-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 8rem;
+}
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -399,6 +409,53 @@ body {
 .card__price-value {
   font-size: 6rem;
   font-weight: 100;
+}
+
+.story {
+  margin: 0 auto;
+  width: 75%;
+  box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 6rem;
+  transform: skewX(-12deg);
+}
+.story > * {
+  transform: skewX(12deg);
+}
+.story__shape {
+  position: relative;
+  width: 15rem;
+  height: 15rem;
+  float: left;
+  shape-outside: circle(50% at 50% 50%);
+  margin-right: 3rem;
+  clip-path: circle(50% at 50% 50%);
+}
+.story__img {
+  height: 100%;
+  max-width: none;
+  transition: all 0.2s;
+  transform: scale(1.4);
+}
+.story__caption {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 20%);
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  text-align: center;
+  transition: all 0.2s;
+  opacity: 0;
+}
+.story:hover .story__caption {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+.story:hover .story__img {
+  transform: scale(1);
+  filter: blur(3px) brightness(80%);
 }
 
 /*# sourceMappingURL=home.css.map */

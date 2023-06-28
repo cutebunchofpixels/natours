@@ -1,0 +1,12 @@
+@use "../../abstracts";
+
+.section-stories {
+    padding: 15rem 0;
+    background-color: abstracts.$variables-color-grey-light-1;
+
+    &__stories-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: abstracts.$variables-row-gap-lg;
+    }
+}
