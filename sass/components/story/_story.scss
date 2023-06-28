@@ -4,7 +4,7 @@
     margin: 0 auto;
     width: 75%;
     box-shadow: 0 3rem 6rem rgba(abstracts.$variables-color-black, .1);
-    background-color: abstracts.$variables-color-white;
+    background-color: rgba(abstracts.$variables-color-white, .6);
     padding: 6rem;
 
     transform: skewX(-12deg);
