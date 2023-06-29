@@ -14,7 +14,7 @@
         left: 0;
         width: 100%;
         backface-visibility: hidden;
-        border-radius: 3px;
+        border-radius: abstracts.$variables-border-radius;
         overflow: hidden;
         box-shadow: 0 1.5rem 4rem rgba(abstracts.$variables-color-black, 0.2);
 
