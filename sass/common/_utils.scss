@@ -1,30 +1,59 @@
+@use "../abstracts";
+
 .container {
     max-width: 1140px;
     margin: 0 auto;
+    padding-inline: 4rem;
+
+    @include abstracts.mixins-respond(tab-portrait) {
+        max-width: 500px;
+    }
 }
 
 .mb-lg {
     margin-bottom: 8rem;
+
+    @include abstracts.mixins-respond(tab-portrait) {
+        margin-bottom: 5rem;
+    }
 }
 
 .mb-m {
     margin-bottom: 4rem;
+
+    @include abstracts.mixins-respond(tab-portrait) {
+        margin-bottom: 3rem;
+    }
 }
 
 .mb-sm {
     margin-bottom: 1.5rem;
+
+    @include abstracts.mixins-respond(tab-portrait) {
+        margin-bottom: 0.9rem;
+    }
 }
 
 .mt-lg {
     margin-top: 8rem;
+
+    @include abstracts.mixins-respond(tab-portrait) {
+        margin-top: 5rem;
+    }
 }
 
 .mt-m {
     margin-top: 4rem;
+
+    @include abstracts.mixins-respond(tab-portrait) {
+        margin-top: 3rem;
+    }
 }
 
 .mt-sm {
-    margin-top: 1.5rem;
+    @include abstracts.mixins-respond(tab-portrait) {
+        margin-top: 0.9rem;
+    }
 }
 
 .text-center {
