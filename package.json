@@ -1,5 +1,18 @@
 {
-  "dependencies": {
+  "scripts": {
+    "compile": "sass sass:css",
+    "concat": "concat -o css/pages/home.concat.css css/icon-font.css css/pages/home.css",
+    "prefix": "postcss --use autoprefixer -b 'last 10 versions' css/pages/home.concat.css -o css/pages/home.prefix.css",
+    "compress": "css-minify -f css/pages/home.prefix.css -o ./css",
+    "build": "npm-run-all compile concat prefix compress"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "concat": "^1.0.3",
+    "css-minify": "^2.0.0",
+    "node-sass": "^9.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^10.1.0",
     "sass": "^1.63.6"
   }
 }
