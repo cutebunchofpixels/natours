@@ -12,6 +12,19 @@
     & > * {
         transform: skewX(12deg);
     }
+
+    @include abstracts.mixins-respond(tab-portrait) {
+        width: 100%;
+        padding: 4rem;
+    }
+
+    @include abstracts.mixins-respond(phone) {
+        transform: skewX(0deg);
+
+        & > * {
+            transform: skewX(0deg);
+        }
+    }
     
     &__shape {
         position: relative;

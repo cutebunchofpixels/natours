@@ -16,9 +16,32 @@
         background-size: cover;
         box-shadow: 0 1.5rem 4rem rgba(abstracts.$variables-color-black, .2);
 
+        @include abstracts.mixins-respond(tab-landscape) {
+             background-image: linear-gradient(105deg,
+                rgba(abstracts.$variables-color-white, .9) 0%,
+                rgba(abstracts.$variables-color-white, .9) 70%,
+                transparent 70%),
+                url(../../img/nat-10.jpg);
+        }
+
+        @include abstracts.mixins-respond(tab-portrait) {
+             background-image: linear-gradient(to right,
+                rgba(abstracts.$variables-color-white, .9) 0%,
+                rgba(abstracts.$variables-color-white, .9) 100%),
+                url(../../img/nat-10.jpg);
+        }
+
         &__form {
             max-width: 50%;
             padding: 6rem;
+
+            @include abstracts.mixins-respond(tab-landscape) {
+                max-width: 70%;
+            }
+
+            @include abstracts.mixins-respond(tab-portrait) {
+                max-width: 100%;
+            }
         }
     }
 }
