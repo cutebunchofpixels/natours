@@ -5,7 +5,7 @@
     background-image: linear-gradient(to right bottom,
             rgba(abstracts.$variables-color-primary-light, 0.8),
             rgba(abstracts.$variables-color-primary-dark, 0.8)),
-        url(../../../img/hero.jpg);
+        url(../img/hero.jpg);
     background-size: cover;
     background-position: top;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
