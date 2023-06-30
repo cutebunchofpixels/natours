@@ -18,6 +18,11 @@
         z-index: 100;
         border-radius: 50%;
         transition: transform 0.7s cubic-bezier(0.86, 0, 0.07, 1);
+
+        @include abstracts.mixins-respond(tab-portrait) {
+            top: 3.5rem;
+            right: 3.5rem;
+        }
     }
 
     &__button {
@@ -32,6 +37,11 @@
         box-shadow: 0 1rem 3rem rgba(abstracts.$variables-color-black, .1);
         text-align: center;
         cursor: pointer;
+
+        @include abstracts.mixins-respond(tab-portrait) {
+            top: 3rem;
+            right: 3rem;
+        }
     }
 
     &__nav {
