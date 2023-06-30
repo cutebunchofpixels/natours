@@ -57,6 +57,11 @@ body {
   }
 }
 
+::selection {
+  background-color: #55c57a;
+  color: #fff;
+}
+
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
@@ -357,6 +362,12 @@ body {
   grid-template-columns: repeat(2, 1fr);
   justify-content: space-between;
   column-gap: 6rem;
+  row-gap: 4rem;
+}
+@media (width <= 900px) {
+  .footer__text {
+    grid-template-columns: 1fr;
+  }
 }
 .footer__list {
   list-style: none;
@@ -775,7 +786,7 @@ body {
   font-size: 6rem;
   font-weight: 100;
 }
-@media (width <= 900px) {
+@media (max-width: 56.25em) or (not (hover)) {
   .card {
     height: auto;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2);
@@ -789,6 +800,9 @@ body {
   .card__side--back {
     transform: rotateY(0);
     clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+  }
+  .card:hover .card__side--front {
+    transform: rotateY(0deg);
   }
   .card__cta {
     padding: 7rem 4rem 4rem 4rem;
