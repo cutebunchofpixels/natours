@@ -1,3 +1,17 @@
+/*
+0 - 600px - mobile
+600 - 900px - tablet portrait
+900 - 1200px - tablet landscape
+1200 - 1800px - desktop
+1800px+ - big desktop
+*/
+/*
+possible $breakpoint values:
+-phone
+-tab-portait
+-tab-landscape
+-big-desktop
+*/
 *,
 ::before,
 ::after {
@@ -14,6 +28,21 @@ img {
 html {
   font-size: 62.5%;
 }
+@media (width >= 1800px) {
+  html {
+    font-size: 75%;
+  }
+}
+@media (width <= 1200px) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (width <= 900px) {
+  html {
+    font-size: 50%;
+  }
+}
 
 body {
   padding: 2rem;
@@ -22,10 +51,16 @@ body {
   line-height: 1.7;
   color: #777;
 }
+@media (width <= 900px) {
+  body {
+    padding: 0;
+  }
+}
 
 .heading-primary {
   color: #fff;
   text-transform: uppercase;
+  text-align: center;
 }
 .heading-primary--main {
   display: block;
@@ -33,11 +68,22 @@ body {
   font-weight: 400;
   letter-spacing: 3.5rem;
 }
+@media (width <= 600px) {
+  .heading-primary--main {
+    letter-spacing: 1rem;
+    font-size: 4.5rem;
+  }
+}
 .heading-primary--sub {
   display: block;
   font-size: 2rem;
   font-weight: 700;
   letter-spacing: 1.3rem;
+}
+@media (width <= 600px) {
+  .heading-primary--sub {
+    font-size: 1.7rem;
+  }
 }
 
 .heading-secodary {
@@ -49,6 +95,16 @@ body {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+}
+@media (width <= 900px) {
+  .heading-secodary {
+    font-size: 3rem;
+  }
+}
+@media (width <= 600px) {
+  .heading-secodary {
+    font-size: 2.5rem;
+  }
 }
 
 .heading-tertiary {

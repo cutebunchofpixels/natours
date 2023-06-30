@@ -14,7 +14,19 @@ img {
 }
 
 html {
-    font-size: 62.5%;
+    font-size: 62.5%; // 10px
+
+    @include abstracts.mixins-respond(big-desktop) {
+        font-size: 75%; // 12px
+    }
+
+    @include abstracts.mixins-respond(tab-landscape) {
+        font-size: 56.25%; // 9px
+    }
+
+    @include abstracts.mixins-respond(tab-portrait) {
+        font-size: 50%; // 8px
+    }
 }
 
 body {
@@ -23,4 +35,9 @@ body {
     font-weight: 400;
     line-height: 1.7;
     color: abstracts.$variables-color-grey-dark;
+
+    @include abstracts.mixins-respond(tab-portrait) {
+        padding: 0;
+    }
+
 }

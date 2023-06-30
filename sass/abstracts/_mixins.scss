@@ -6,3 +6,48 @@
         background-color: $background-color;
     }
 }
+
+//MEDIA QUERY MANAGER
+
+/*
+0 - 600px - mobile
+600 - 900px - tablet portrait
+900 - 1200px - tablet landscape
+1200 - 1800px - desktop
+1800px+ - big desktop
+*/
+
+
+/*
+possible $breakpoint values:
+-phone
+-tab-portait
+-tab-landscape
+-big-desktop
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (width <= 600px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == tab-portrait {
+        @media (width <= 900px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == tab-landscape {
+        @media (width <= 1200px) {
+            @content;
+        }
+    }
+
+    @if $breakpoint == big-desktop {
+        @media (width >= 1800px) {
+            @content;
+        }
+    }
+}
