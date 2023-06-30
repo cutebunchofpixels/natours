@@ -10,5 +10,10 @@
         grid-template-columns: repeat(3, 1fr);
         justify-content: space-between;
         column-gap: abstracts.$variables-column-gap;
+        row-gap: abstracts.$variables-row-gap;
+
+        @include abstracts.mixins-respond(tab-portrait) {
+            grid-template-columns: 1fr;
+        }
     }
 }

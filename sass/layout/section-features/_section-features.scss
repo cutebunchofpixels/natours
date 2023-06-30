@@ -16,10 +16,19 @@
         transform: skewY(7deg);
     }
 
+    @include abstracts.mixins-respond(tab-portrait) {
+        padding: 10rem 0;
+    }
+
     &__features-grid {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        justify-items: center;
+        justify-items: space-between;
         column-gap: abstracts.$variables-column-gap;
+        row-gap: abstracts.$variables-row-gap;
+
+        @include abstracts.mixins-respond(tab-portrait) {
+            grid-template-columns: 1fr;
+        }
     }
 }

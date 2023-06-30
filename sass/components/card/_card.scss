@@ -161,4 +161,33 @@
         font-size: 6rem;
         font-weight: 100;
     }
+
+    @include abstracts.mixins-respond(tab-portrait) {
+        height: auto;
+        box-shadow: 0 1.5rem 4rem rgba(abstracts.$variables-color-black, 0.2);
+        background-color: abstracts.$variables-color-white;
+
+        &__side {
+            height: auto;
+            position: relative;
+            box-shadow: none;
+
+            &--back {
+                transform: rotateY(0);
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+            }
+        }
+
+        &__cta {
+            padding: 7rem 4rem 4rem 4rem;
+        }
+
+        &__price-box {
+            margin-bottom: 3rem;
+        }
+
+        &__price-value {
+            font-size: 5rem;
+        }
+    }
 }
