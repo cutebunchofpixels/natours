@@ -11,7 +11,7 @@
         rgba(abstracts.$variables-color-white, .9) 0%,
         rgba(abstracts.$variables-color-white, .9) 50%,
         transparent 50%),
-        url(../../img/nat-10.jpg);
+        url(../img/nat-10.jpg);
 
         background-size: cover;
         box-shadow: 0 1.5rem 4rem rgba(abstracts.$variables-color-black, .2);
@@ -21,14 +21,14 @@
                 rgba(abstracts.$variables-color-white, .9) 0%,
                 rgba(abstracts.$variables-color-white, .9) 70%,
                 transparent 70%),
-                url(../../img/nat-10.jpg);
+                url(../img/nat-10.jpg);
         }
 
         @include abstracts.mixins-respond(tab-portrait) {
              background-image: linear-gradient(to right,
                 rgba(abstracts.$variables-color-white, .9) 0%,
                 rgba(abstracts.$variables-color-white, .9) 100%),
-                url(../../img/nat-10.jpg);
+                url(../img/nat-10.jpg);
         }
 
         &__form {
